@@ -71,7 +71,7 @@ $modalidades = [
     ],
     'workshop' => [
         'titulo'      => 'Somente workshop',
-        'nota'        => 'Somente o dia 22, de estações rotativas, casos simulados e Escape Room, em 30 vagas.',
+        'nota'        => 'Somente o dia 22, com cinco estações práticas e o desafio final de caso clínico, em 30 vagas.',
         'checkout_id' => ['geral' => '68633'],
         'precos'      => [
             'geral' => ['1' => 95000, '2' => 125000],

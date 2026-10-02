@@ -11,8 +11,8 @@ $selos = [
 
 $numeros = [
     'Data'           => '20, 21 e 22 de novembro de 2026',
-    'Local'          => 'Faculdade Ufape, R. Honduras, 765, Jardim Paulista, São Paulo/SP',
-    'Carga horária'  => '24 horas estimadas, entre programação científica, workshop e debriefings',
+    'Local'          => 'Faculdade Ufape, Av. Tiradentes, 960, São Paulo/SP',
+    'Carga horária'  => '24 horas estimadas, entre programação científica e workshop prático',
     'Vagas workshop' => 'Somente 30 vagas para o dia 22 de novembro',
 ];
 
@@ -22,7 +22,6 @@ $diferenciais = [
     'Discussão de limitações, artefatos e interpretação em diferentes espécies.',
     'Trilha específica para interface Anestesiologia e UTI, incluindo sedação, neuroproteção e paciente crítico.',
     'Workshop de um dia inteiro com estações rotativas, interpretação em tempo real e casos simulados.',
-    'Escape Room da Anestesia com debriefing baseado em evidências.',
     'Abordagem centrada em decisões clínicas, não apenas em equipamentos.',
 ];
 
@@ -84,60 +83,54 @@ function iniciais(string $nome): string
 $programacao = [
     [
         'data'   => '20 de novembro de 2026, sexta-feira',
-        'tema'   => 'O cérebro sob anestesia',
+        'tema'   => 'Do cérebro ao sinal',
         'linhas' => [
-            ['08h30 às 09h00', 'Abertura. Por que ainda anestesiamos no escuro?', 'Prof. MSc. Yuri Vicentini e Prof. MSc. Daniel Zannin', 'Evolução da monitorização, EEG e conceito de Precision Anesthesia.'],
-            ['09h00 às 10h00', 'Neurofisiologia aplicada à anestesia', 'Prof. Dr. Rodrigo Neca', 'Redes neurais, consciência, formação reticular, tálamo, sono, hipnose, dor e nocicepção.'],
-            ['10h00 às 10h30', 'Intervalo', '', ''],
-            ['10h30 às 11h30', 'EEG para anestesistas veterinários: do traçado à decisão', 'Palestrante a confirmar', 'Ondas, EMG, eletrocautério, hipotermia, burst suppression e isoeletricidade.'],
-            ['11h30 às 12h15', 'Artefato ou cérebro? O que realmente estamos medindo?', 'Prof. MSc. Yuri Vicentini', 'Discussão interativa de traçados e armadilhas de interpretação.'],
-            ['12h15 às 13h30', 'Intervalo para almoço', '', ''],
-            ['13h30 às 14h30', 'BIS: história, algoritmo, interpretação e limitações', 'Palestrante a confirmar', 'Quando confiar, quando não confiar e como evitar interpretação isolada do índice.'],
-            ['14h30 às 15h30', 'BIS nas diferentes espécies: cães, gatos, equinos, suínos e ruminantes', 'Palestrante a confirmar', 'Discussão crítica da literatura veterinária e aplicabilidade clínica.'],
-            ['15h30 às 16h00', 'Intervalo', '', ''],
-            ['16h00 às 17h00', 'Consciência intraoperatória e profundidade anestésica', 'Palestrante a confirmar', 'Hipnose, resposta motora, memória e limites dos índices processados.'],
-            ['17h00 às 18h00', 'Mesa redonda: BIS realmente mede profundidade anestésica?', 'Prof. MV. MSc. TEAV Daniel Zannin, Prof. MSc. Yuri Vicentini e palestrante a confirmar', 'Debate orientado por casos clínicos.'],
-            ['18h00 às 18h30', 'Fechamento do dia e briefing para o sábado', 'Coordenação científica', 'Síntese dos conceitos e perguntas chave.'],
+            ['08h30 às 09h30', 'Por que ainda anestesiamos no escuro? Consciência intraoperatória e profundidade anestésica', 'Prof. MSc. Yuri Vicentini e Prof. MSc. Daniel Zannin', ''],
+            ['09h30 às 10h30', 'Neurofisiologia aplicada à anestesia: o papel dos neurônios piramidais e do tálamo', 'Prof. MSc. Daniel Zannin', ''],
+            ['10h30 às 11h00', 'Intervalo', '', ''],
+            ['11h00 às 12h00', 'EEG para anestesistas: como o EEG é aferido e quais são os padrões de onda', 'Prof. MSc. Daniel Zannin', ''],
+            ['12h00 às 13h00', 'Almoço', '', ''],
+            ['13h00 às 13h45', 'Análise espectral, CSA e DSA', 'Prof. MSc. Daniel Zannin', ''],
+            ['13h45 às 14h30', 'Artefato ou cérebro? O que realmente estamos medindo?', 'Prof. MSc. Yuri Vicentini', ''],
+            ['14h30 às 15h00', 'Intervalo', '', ''],
+            ['15h00 às 16h00', 'BIS: história, algoritmo, interpretação e limitações', 'Prof. MSc. Daniel Zannin', ''],
+            ['16h00 às 17h00', 'BIS nas diferentes espécies: o que sabemos e quais são as limitações', 'Prof. Dr. Rodrigo Neca', ''],
+            ['17h00 às 18h00', 'Mesa redonda: profundidade anestésica além do número', 'Prof. MSc. Daniel Zannin, Prof. MSc. Yuri Vicentini, Prof. Dr. Rodrigo Neca e Profa. Dra. Mayara Travalini (mediadora)', 'Discussão de casos e integração entre EEG bruto, índices processados e sinais clínicos.'],
         ],
     ],
     [
         'data'   => '21 de novembro de 2026, sábado',
-        'tema'   => 'Muito além do BIS',
+        'tema'   => 'Do sinal à decisão',
         'linhas' => [
-            ['08h30 às 09h15', 'qCON: hipnose e estados de consciência', 'Prof. MSc. Yuri Vicentini', 'Diferenças conceituais e clínicas em relação ao BIS.'],
-            ['09h15 às 10h00', 'qNOX: nocicepção e predição de resposta', 'Prof. MSc. Yuri Vicentini', 'Movimento, resposta autonômica, limitações e interpretação contextual.'],
-            ['10h00 às 10h45', 'PTA: variabilidade da frequência cardíaca e analgesia guiada', 'Palestrante a confirmar', 'Quando aumentar opioide? Quando reduzir? Como integrar com PA e FC.'],
-            ['10h45 às 11h15', 'Intervalo', '', ''],
-            ['11h15 às 12h00', 'NIRS e oxigenação cerebral', 'Palestrante a confirmar', 'Perfusão, choque, sepse, neurocirurgia e paciente crítico.'],
-            ['12h00 às 12h45', 'Entropia, EEG bruto, CSA e DSA', 'Prof. MV. MSc. TEAV. Daniel Zannin', 'Response Entropy, State Entropy, espectrograma e leitura complementar.'],
-            ['12h45 às 13h30', 'Pupilometria e Pupillary Pain Index', 'Palestrante a confirmar', 'Reflexo pupilar, estímulo nociceptivo e aplicações perioperatórias.'],
-            ['13h30 às 14h30', 'Intervalo para almoço', '', ''],
-            ['14h30 às 15h15', 'Índices derivados de IA: o futuro da anestesia de precisão', 'Prof. Dr. Alessandro Martins e palestrante a confirmar', 'Machine learning, predição de despertar, hipotensão e analgesia personalizada.'],
-            ['15h15 às 16h00', 'UTI neuromonitorizada: sedação, EEG simplificado e analgesia', 'Prof. Daniel Zannin, Prof. Renan Holczer e Profa. Dra. Mayara Travalini de Lima', 'Paciente séptico, TCE, estado epiléptico, pós PCR e sedação prolongada.'],
-            ['16h00 às 16h30', 'Intervalo', '', ''],
-            ['16h30 às 17h30', 'Neuromonitorização multimodal: o paciente não é apenas um BIS', 'Prof. Dr. Rodrigo Neca', 'Integração de BIS, qNOX, PTA, PAM, ETCO2, MAC, NIRS, temperatura, lactato e gasometria.'],
-            ['17h30 às 18h30', 'Grande mesa de casos: o monitor mudou a sua conduta?', 'Mayara, Rodrigo, Daniel, Yuri e convidados', 'Casos curtos, votação e justificativa da decisão anestésica.'],
+            ['08h30 às 09h15', 'qCON: monitorização da hipnose e estados de consciência', 'Prof. MSc. Yuri Vicentini', ''],
+            ['09h15 às 10h00', 'qNOX: resposta nociceptiva e aplicação clínica', 'Prof. MSc. Yuri Vicentini', ''],
+            ['10h00 às 10h30', 'Intervalo', '', ''],
+            ['10h30 às 11h15', 'Entropia e outros índices derivados do EEG', 'Prof. MSc. Daniel Zannin', ''],
+            ['11h15 às 12h00', 'PTA: variabilidade da frequência cardíaca e analgesia guiada', 'Palestrante a confirmar', ''],
+            ['12h00 às 13h00', 'Almoço', '', ''],
+            ['13h00 às 13h45', 'Inteligência artificial e o futuro da neuromonitorização', 'Palestrante a confirmar', ''],
+            ['13h45 às 14h45', 'Mesa redonda: neuromonitorização no paciente crítico', 'Prof. Dr. Rodrigo Neca, Profa. Dra. Mayara Travalini, Prof. MSc. Daniel Zannin e Prof. MSc. Yuri Vicentini', 'Sedação, TCE, estado epiléptico, pós PCR e alterações sistêmicas que interferem no cérebro.'],
+            ['14h45 às 15h15', 'Intervalo', '', ''],
+            ['15h15 às 16h15', 'O paciente não é apenas um índice', 'Prof. MSc. Daniel Zannin e Profa. Dra. Mayara Travalini', 'Integração entre EEG, profundidade anestésica, nocicepção, hemodinâmica, ventilação e perfusão.'],
+            ['16h15 às 17h30', 'Mesa de casos: quando o monitor muda a sua conduta?', 'Prof. MSc. Daniel Zannin, Profa. Dra. Mayara Travalini, Prof. MSc. Yuri Vicentini e Prof. Dr. Rodrigo Neca', 'Integração entre hipnose, nocicepção, pressão arterial, ventilação, temperatura e resposta clínica.'],
+            ['17h30 às 18h00', 'Encerramento e discussão geral', '', ''],
         ],
     ],
 ];
 
+// O workshop veio sem horário por estação: a coluna da esquerda leva o nome da
+// estação, que é como a coordenação organizou o dia.
 $workshop = [
     'data'      => '22 de novembro de 2026, domingo',
-    'tema'      => 'Monitorando um paciente do início ao fim',
+    'tema'      => 'Do sensor à decisão clínica',
     'descricao' => 'Dia inteiro de prática em estações rotativas, exclusivamente presencial. A turma será dividida em pequenos grupos conforme a quantidade de equipamentos e instrutores. Cada estação combina execução, interpretação e decisão clínica.',
     'linhas'    => [
-        ['08h30 às 09h00', 'Briefing geral do workshop', 'Coordenação e instrutores', 'Segurança, divisão dos grupos, objetivos e critérios de debriefing.'],
-        ['09h00 às 09h40', 'Estação 1. Instalação correta', 'Instrutores do simpósio', 'BIS, qCON, qNOX e PTA: colocação, preparo de pele e prevenção de artefatos.'],
-        ['09h45 às 10h25', 'Estação 2. Simulador de EEG', 'Convidado em EEG e monitores', 'Superficial? Profundo? Artefato? Burst suppression? Previsão de despertar.'],
-        ['10h30 às 11h10', 'Estação 3. Casos clínicos simulados', 'Daniel e instrutores', 'Piometra com BIS 18 e PAM 42; gato com cetamina e BIS elevado; decisão contextual.'],
-        ['11h15 às 11h55', 'Estação 4. Nocicepção em tempo real', 'Mayara e convidados', 'Vídeos cirúrgicos com qNOX, PTA, FC, PA e EMG; decisão sobre opioide, bloqueio e adjuvantes.'],
-        ['12h00 às 13h00', 'Intervalo para almoço', '', ''],
-        ['13h00 às 13h40', 'Estação 5. Ultrassom e neuromonitorização', 'Instrutor de locorregional e Mayara', 'Bloqueios locorregionais e avaliação do efeito sobre PTA e qNOX.'],
-        ['13h45 às 14h25', 'Estação 6. UTI neuromonitorizada', 'Renan e equipe a confirmar', 'Choque séptico, TCE, estado epiléptico, hipóxia, hipotermia, intoxicações e pós PCR.'],
-        ['14h30 às 15h10', 'Estação 7. Recuperação anestésica', 'Equipe do simpósio', 'Despertar, delirium, vocalização, disforia e recuperação neurológica.'],
-        ['15h15 às 16h15', 'Escape Room da Anestesia', 'Mayara, Alessandro, Daniel e convidados', 'Equipes recebem um caso e novos eventos em tempo real: hipotensão, hipercapnia, burst suppression, qNOX alto, PTA baixo, arritmia, hipotermia e sangramento.'],
-        ['16h15 às 17h00', 'Debriefing integrado baseado em evidências', 'Painel de especialistas', 'Análise das decisões, prioridades, comunicação e uso dos monitores.'],
-        ['17h00 às 17h30', 'Encerramento e mensagem final', 'Coordenação científica', 'Síntese prática: medir menos por medir e interpretar mais para decidir melhor.'],
+        ['Estação 1', 'Colocação de sensores e qualidade de sinal', '', 'Posicionamento, impedância, preparo da pele e identificação de interferências.'],
+        ['Estação 2', 'EEG na prática', '', 'Reconhecimento de padrões de anestesia superficial, profunda, burst suppression, EMG e despertar.'],
+        ['Estação 3', 'BIS, qCON e índices processados', '', 'Correlação entre EEG bruto e números apresentados pelos monitores.'],
+        ['Estação 4', 'Nocicepção em tempo real', '', 'Integração de frequência cardíaca, pressão arterial, qNOX e demais sinais autonômicos.'],
+        ['Estação 5', 'Casos clínicos integrados', '', 'O que fazer diante de hipotensão, hipercapnia, burst suppression, nocicepção, hipotermia e recuperação inadequada?'],
+        ['Encerramento', 'Desafio final: monitore o paciente, interprete os sinais e tome a decisão', '', 'Caso clínico progressivo envolvendo diferentes monitores e alterações fisiológicas, com discussão coletiva das condutas.'],
     ],
 ];
 
@@ -187,7 +180,7 @@ $faq = [
     ['O evento será presencial ou online?', 'A proposta principal é presencial. A gravação e transmissão das palestras teóricas ainda será confirmada. O workshop é presencial.'],
     ['É necessário saber interpretar EEG previamente?', 'Não. A sexta-feira foi desenhada justamente para construir a base clínica de neurofisiologia, EEG e índices processados.'],
     ['O evento será apenas sobre BIS?', 'Não. O simpósio integra BIS, qCON, qNOX, PTA, NIRS, entropia, pupilometria, EEG bruto, CSA e DSA e outros dados fisiológicos.'],
-    ['Haverá prática?', 'Sim. O domingo é dedicado ao workshop, com estações rotativas, simulação, casos e Escape Room.'],
+    ['Haverá prática?', 'Sim. O domingo é dedicado ao workshop, com cinco estações rotativas e um desafio final de caso clínico progressivo.'],
     ['O workshop está incluído no ingresso do simpósio?', 'Depende da modalidade escolhida. Há inscrição no simpósio e no workshop juntos, somente no simpósio dos dias 20 e 21 e somente no workshop do dia 22. Os valores de cada uma estão na seção de investimento.'],
     ['Haverá certificado?', 'Sim, conforme presença e modalidade de inscrição definida pela UFAPE.'],
 ];

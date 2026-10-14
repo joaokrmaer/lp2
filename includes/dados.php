@@ -53,28 +53,12 @@ $categorias = [
 // de um produto mais barato. Enquanto o id estiver vazio, a inscrição da modalidade
 // vai para a secretaria pelo WhatsApp.
 $modalidades = [
-    'combo' => [
-        'titulo'      => 'Simpósio + workshop',
-        'nota'        => 'Os três dias: simpósio nos dias 20 e 21 e workshop no dia 22, limitado aos 30 primeiros inscritos.',
-        'checkout_id' => ['geral' => '68631'],
-        'precos'      => [
-            'geral' => ['1' => 120000, '2' => 150000],
-        ],
-    ],
     'simposio' => [
-        'titulo'      => 'Somente simpósio',
-        'nota'        => 'A programação científica dos dias 20 e 21, sem as estações práticas do domingo.',
+        'titulo'      => 'Simpósio',
+        'nota'        => 'A programação científica completa dos dias 20 e 21 de novembro.',
         'checkout_id' => ['geral' => '68634'],
         'precos'      => [
             'geral' => ['1' => 40000, '2' => 50000],
-        ],
-    ],
-    'workshop' => [
-        'titulo'      => 'Somente workshop',
-        'nota'        => 'Somente o dia 22, com cinco estações práticas e o desafio final de caso clínico, em 30 vagas.',
-        'checkout_id' => ['geral' => '68633'],
-        'precos'      => [
-            'geral' => ['1' => 95000, '2' => 125000],
         ],
     ],
 ];
@@ -109,7 +93,7 @@ function cupom_valido(string $codigo): bool
 }
 
 // UTMs que marcam a inscrição como vinda desta landing page. A modalidade vai no
-// utm_content porque as três saem do mesmo popup e o relatório precisa separá-las.
+// utm_content para o relatório separar as modalidades, se voltarem a ser mais de uma.
 function utm_checkout(string $modalidade, string $lote): string
 {
     return http_build_query([

@@ -5,23 +5,23 @@
 
 $selos = [
     'Evento presencial',
-    'Workshop dia 22/11 exclusivo para os 30 primeiros inscritos',
     'Certificado UFAPE',
 ];
 
 $numeros = [
-    'Data'           => '20, 21 e 22 de novembro de 2026',
-    'Local'          => 'Faculdade Ufape, Av. Tiradentes, 960, São Paulo/SP',
-    'Carga horária'  => '24 horas estimadas, entre programação científica e workshop prático',
-    'Vagas workshop' => 'Somente 30 vagas para o dia 22 de novembro',
+    'Data'           => '20 e 21 de novembro de 2026',
+    'Local'          => 'Faculdade Ufape, Unidade 2<br>Av. Tiradentes, 960, São Paulo/SP',
+    'Carga horária'  => 'Dois dias de programação científica',
 ];
+
+// Endereço da chamada final e do mapa; a busca do Google Maps usa este texto.
+$endereco_evento = 'Av. Tiradentes, 960, São Paulo/SP';
 
 $diferenciais = [
     'Primeiro evento UFAPE estruturado especificamente em torno de neuromonitorização e tomada de decisão anestésica.',
     'Integração de EEG bruto, BIS, qCON, qNOX, PTA, NIRS, entropia, pupilometria e índices derivados de inteligência artificial.',
     'Discussão de limitações, artefatos e interpretação em diferentes espécies.',
     'Trilha específica para interface Anestesiologia e UTI, incluindo sedação, neuroproteção e paciente crítico.',
-    'Workshop de um dia inteiro com estações rotativas, interpretação em tempo real e casos simulados.',
     'Abordagem centrada em decisões clínicas, não apenas em equipamentos.',
 ];
 
@@ -118,27 +118,10 @@ $programacao = [
     ],
 ];
 
-// O workshop veio sem horário por estação: a coluna da esquerda leva o nome da
-// estação, que é como a coordenação organizou o dia.
-$workshop = [
-    'data'      => '22 de novembro de 2026, domingo',
-    'tema'      => 'Do sensor à decisão clínica',
-    'descricao' => 'Dia inteiro de prática em estações rotativas, exclusivamente presencial. A turma será dividida em pequenos grupos conforme a quantidade de equipamentos e instrutores. Cada estação combina execução, interpretação e decisão clínica.',
-    'linhas'    => [
-        ['Estação 1', 'Colocação de sensores e qualidade de sinal', '', 'Posicionamento, impedância, preparo da pele e identificação de interferências.'],
-        ['Estação 2', 'EEG na prática', '', 'Reconhecimento de padrões de anestesia superficial, profunda, burst suppression, EMG e despertar.'],
-        ['Estação 3', 'BIS, qCON e índices processados', '', 'Correlação entre EEG bruto e números apresentados pelos monitores.'],
-        ['Estação 4', 'Nocicepção em tempo real', '', 'Integração de frequência cardíaca, pressão arterial, qNOX e demais sinais autonômicos.'],
-        ['Estação 5', 'Casos clínicos integrados', '', 'O que fazer diante de hipotensão, hipercapnia, burst suppression, nocicepção, hipotermia e recuperação inadequada?'],
-        ['Encerramento', 'Desafio final: monitore o paciente, interprete os sinais e tome a decisão', '', 'Caso clínico progressivo envolvendo diferentes monitores e alterações fisiológicas, com discussão coletiva das condutas.'],
-    ],
-];
-
 $inclusos = [
     'Certificado UFAPE conforme modalidade e presença',
     'Apostila e material digital, se previsto',
     'Acesso às gravações das palestras teóricas, caso a modalidade seja confirmada',
-    'Participação nas estações do workshop para os 30 primeiros inscritos',
 ];
 
 // A foto entra quando a coordenação enviar; sem ela o card mostra só nome e atuação.
@@ -146,7 +129,7 @@ $inclusos = [
 // títulos diferentes a cada linha.
 $palestrantes = [
     ['nome' => 'Profa. Dra. Mayara Travalini de Lima', 'tema' => 'Coordenação científica. Neuromonitorização, nocicepção, integração multimodal e casos', 'foto' => 'mayara.jpg', 'chave' => 'Mayara'],
-    ['nome' => 'Prof. Dr. Alessandro Martins', 'tema' => 'Coordenação, tecnologia e integração, workshop avançado', 'foto' => 'alessandro.jpg', 'chave' => 'Alessandro'],
+    ['nome' => 'Prof. Dr. Alessandro Martins', 'tema' => 'Coordenação, tecnologia e integração', 'foto' => 'alessandro.jpg', 'chave' => 'Alessandro'],
     ['nome' => 'Prof. Daniel Zannin', 'tema' => 'Apoio à trilha de ventilação e UTI, conforme expertise e confirmação', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
     ['nome' => 'Prof. Renan Holczer', 'tema' => 'Ventilação mecânica e UTI neuromonitorizada', 'foto' => 'renan.jpg', 'chave' => 'Renan'],
     ['nome' => 'Prof. MSc. Yuri Ferreira Vicentini', 'tema' => 'Artefatos de EEG, qCON e qNOX na decisão anestésica', 'foto' => 'yuri.jpg', 'chave' => 'Yuri'],
@@ -177,10 +160,8 @@ function retratos_da_linha(string $quem): array
 }
 
 $faq = [
-    ['O evento será presencial ou online?', 'A proposta principal é presencial. A gravação e transmissão das palestras teóricas ainda será confirmada. O workshop é presencial.'],
+    ['O evento será presencial ou online?', 'A proposta principal é presencial. A gravação e transmissão das palestras teóricas ainda será confirmada.'],
     ['É necessário saber interpretar EEG previamente?', 'Não. A sexta-feira foi desenhada justamente para construir a base clínica de neurofisiologia, EEG e índices processados.'],
     ['O evento será apenas sobre BIS?', 'Não. O simpósio integra BIS, qCON, qNOX, PTA, NIRS, entropia, pupilometria, EEG bruto, CSA e DSA e outros dados fisiológicos.'],
-    ['Haverá prática?', 'Sim. O domingo é dedicado ao workshop, com cinco estações rotativas e um desafio final de caso clínico progressivo.'],
-    ['O workshop está incluído no ingresso do simpósio?', 'Depende da modalidade escolhida. Há inscrição no simpósio e no workshop juntos, somente no simpósio dos dias 20 e 21 e somente no workshop do dia 22. Os valores de cada uma estão na seção de investimento.'],
     ['Haverá certificado?', 'Sim, conforme presença e modalidade de inscrição definida pela UFAPE.'],
 ];

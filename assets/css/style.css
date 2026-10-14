@@ -235,7 +235,7 @@ html {
 
 .faixa-numeros .lp-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     padding-top: 25px;
     padding-bottom: 25px;
@@ -349,6 +349,11 @@ html {
     background-color: #fff;
 }
 
+/* com número ímpar de itens, o último ocupa a linha toda e não sobra célula vazia */
+.lista-diferenciais li:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+}
+
 /* Programação --------------------------------------------------------------- */
 
 .dia {
@@ -441,7 +446,8 @@ html {
 
 .grade-precos {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: minmax(0, 440px);
+    justify-content: center;
     gap: 20px;
     align-items: stretch;
 }
@@ -528,7 +534,7 @@ html {
 
 .inclusos {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 15px;
     margin-top: 30px;
 }
@@ -721,6 +727,35 @@ html {
 
 .chamada-final .bt {
     margin-top: 30px;
+}
+
+.chamada-final .mapa {
+    max-width: 480px;
+    margin: 36px auto 0;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 2 / 1;
+    opacity: .85;
+    transition: opacity .2s;
+}
+
+.chamada-final .mapa:hover {
+    opacity: 1;
+}
+
+.chamada-final .mapa iframe {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.chamada-final .link-mapa {
+    display: inline-block;
+    margin-top: 10px;
+    font-size: 13px;
+    color: var(--verde-claro);
+    text-decoration: underline;
 }
 
 /* Popup de inscrição --------------------------------------------------------- */

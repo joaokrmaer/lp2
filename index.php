@@ -20,7 +20,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 <section class="hero">
     <div class="lp-container<?= $banner ? '' : ' sem-foto' ?>">
         <div>
-            <span class="selo-evento">20, 21 e 22 de novembro de 2026</span>
+            <span class="selo-evento">20 e 21 de novembro de 2026</span>
             <h1>I Simpósio Brasileiro de Neuromonitorização Veterinária</h1>
             <p class="subtitulo">Anestesia e Neurologia</p>
             <p class="tema">Neuromonitorização, Nocicepção e Inteligência Anestésica</p>
@@ -96,8 +96,8 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
     <div class="lp-container">
         <h2 class="titulo-secao">Programação <span>científica</span></h2>
         <p class="intro">
-            Dois dias de imersão científica e um domingo inteiro de workshop. Professores e horários seguem sujeitos
-            a confirmação antes da divulgação.
+            Dois dias de imersão científica. Professores e horários seguem sujeitos a confirmação antes da
+            divulgação.
         </p>
 
         <?php foreach ($programacao as $dia): ?>
@@ -120,32 +120,6 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
                 <?php endforeach; ?>
             </div>
         <?php endforeach; ?>
-    </div>
-</section>
-
-<section class="secao" id="workshop">
-    <div class="lp-container">
-        <span class="chapeu"><?= $workshop['data'] ?></span>
-        <h2 class="titulo-secao">Workshop <span><?= $workshop['tema'] ?></span></h2>
-        <p class="intro"><?= $workshop['descricao'] ?></p>
-
-        <div class="agenda">
-            <?php foreach ($workshop['linhas'] as [$hora, $atividade, $quem, $foco]): ?>
-                <div class="linha">
-                    <span class="hora"><?= $hora ?></span>
-                    <span class="atividade">
-                        <?= $atividade ?>
-                        <?php if ($foco): ?><span class="foco"><?= $foco ?></span><?php endif; ?>
-                    </span>
-                    <span class="palestrante">
-                        <?php foreach (retratos_da_linha($quem) as $retrato): ?>
-                            <img src="<?= $lp ?>/assets/img/<?= $retrato ?>" alt="" loading="lazy">
-                        <?php endforeach; ?>
-                        <?= $quem ?>
-                    </span>
-                </div>
-            <?php endforeach; ?>
-        </div>
     </div>
 </section>
 
@@ -226,8 +200,17 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 <section class="chamada-final">
     <div class="lp-container">
         <h2>Do cérebro à analgesia, monitorando aquilo que realmente importa</h2>
-        <p>20, 21 e 22 de novembro de 2026, Faculdade Ufape, São Paulo/SP.</p>
+        <p>20 e 21 de novembro de 2026, <?= $endereco_evento ?>.</p>
         <a class="bt bt-claro" href="#investimento">Fazer minha inscrição</a>
+        <div class="mapa">
+            <iframe
+                src="https://www.google.com/maps?q=<?= urlencode($endereco_evento) ?>&amp;output=embed"
+                title="Mapa do local do evento"
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                allowfullscreen></iframe>
+        </div>
+        <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode($endereco_evento) ?>" target="_blank" rel="noopener">Abrir no Google Maps</a>
     </div>
 </section>
 

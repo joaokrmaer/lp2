@@ -31,7 +31,7 @@
 
     function urlWhatsapp() {
         const linhas = [
-            'Olá! Quero me inscrever no Simpósio Brasileiro de Neuromonitorização Veterinária (20 e 21 de novembro).',
+            'Olá! Quero me inscrever no Workshop de Neuromonitorização Veterinária (22 de novembro).',
             '',
             'Nome: ' + nome.value.trim(),
             'Telefone: ' + telefone.value.trim(),

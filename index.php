@@ -20,14 +20,14 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 <section class="hero">
     <div class="lp-container<?= $banner ? '' : ' sem-foto' ?>">
         <div>
-            <span class="selo-evento">20 e 21 de novembro de 2026</span>
-            <h1>I Simpósio Brasileiro de Neuromonitorização Veterinária</h1>
-            <p class="subtitulo">Anestesia e Neurologia</p>
-            <p class="tema">Neuromonitorização, Nocicepção e Inteligência Anestésica</p>
+            <span class="selo-evento">22 de novembro de 2026, domingo</span>
+            <h1>Workshop de Neuromonitorização Veterinária</h1>
+            <p class="subtitulo">I Simpósio Brasileiro de Neuromonitorização Veterinária, Anestesia e Neurologia</p>
+            <p class="tema">Do sensor à decisão clínica</p>
             <p class="lema">Do cérebro à analgesia: monitorando aquilo que realmente importa.</p>
             <p class="chamada">
-                Um simpósio para o médico veterinário interpretar o que existe por trás dos números, integrar EEG,
-                hipnose, nocicepção, perfusão e fisiologia e transformar monitorização avançada em decisões
+                Um dia inteiro de prática em estações rotativas para o médico veterinário colocar sensores, ler o
+                EEG, entender o que existe por trás dos números e transformar monitorização avançada em decisões
                 anestésicas mais precisas no centro cirúrgico e na UTI.
             </p>
             <p class="publico">
@@ -47,7 +47,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
         </div>
         <?php if ($banner): ?>
             <div class="foto">
-                <img src="<?= $lp ?>/assets/img/<?= $banner ?>" alt="I Simpósio Brasileiro de Neuromonitorização Veterinária, Anestesia e Neurologia">
+                <img src="<?= $lp ?>/assets/img/<?= $banner ?>" alt="Workshop de Neuromonitorização Veterinária, I Simpósio Brasileiro de Neuromonitorização Veterinária">
             </div>
         <?php endif; ?>
     </div>
@@ -76,8 +76,8 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
                     paciente crítico.
                 </p>
                 <p>
-                    A programação aproxima neurofisiologia e tecnologia da rotina clínica de cães, gatos, equinos e
-                    bovinos, tanto no centro cirúrgico quanto na UTI. O objetivo é ensinar o participante a
+                    O workshop leva a neuromonitorização para a prática da rotina clínica de cães, gatos, equinos e
+                    bovinos, tanto no centro cirúrgico quanto na UTI. O objetivo é treinar o participante a
                     interpretar EEG e índices derivados de forma clínica, reconhecer limitações e artefatos, integrar
                     diferentes tecnologias de monitorização e usar os dados para responder perguntas práticas sobre
                     hipnose, nocicepção, analgesia, despertar, sedação e risco de deterioração.
@@ -94,38 +94,33 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 
 <section class="secao cinza" id="programacao">
     <div class="lp-container">
-        <h2 class="titulo-secao">Programação <span>científica</span></h2>
-        <p class="intro">
-            Dois dias de imersão científica. Professores e horários seguem sujeitos a confirmação antes da
-            divulgação.
-        </p>
+        <span class="chapeu"><?= $workshop['data'] ?></span>
+        <h2 class="titulo-secao">Programação <span>do workshop</span></h2>
+        <p class="intro"><?= $workshop['descricao'] ?></p>
 
-        <?php foreach ($programacao as $dia): ?>
-            <h3 class="dia"><?= $dia['data'] ?> <span><?= $dia['tema'] ?></span></h3>
-            <div class="agenda">
-                <?php foreach ($dia['linhas'] as [$hora, $atividade, $quem, $foco]): ?>
-                    <div class="linha">
-                        <span class="hora"><?= $hora ?></span>
-                        <span class="atividade">
-                            <?= $atividade ?>
-                            <?php if ($foco): ?><span class="foco"><?= $foco ?></span><?php endif; ?>
-                        </span>
-                        <span class="palestrante">
-                            <?php foreach (retratos_da_linha($quem) as $retrato): ?>
-                                <img src="<?= $lp ?>/assets/img/<?= $retrato ?>" alt="" loading="lazy">
-                            <?php endforeach; ?>
-                            <?= $quem ?>
-                        </span>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        <?php endforeach; ?>
+        <div class="agenda">
+            <?php foreach ($workshop['linhas'] as [$hora, $atividade, $quem, $foco]): ?>
+                <div class="linha">
+                    <span class="hora"><?= $hora ?></span>
+                    <span class="atividade">
+                        <?= $atividade ?>
+                        <?php if ($foco): ?><span class="foco"><?= $foco ?></span><?php endif; ?>
+                    </span>
+                    <span class="palestrante">
+                        <?php foreach (retratos_da_linha($quem) as $retrato): ?>
+                            <img src="<?= $lp ?>/assets/img/<?= $retrato ?>" alt="" loading="lazy">
+                        <?php endforeach; ?>
+                        <?= $quem ?>
+                    </span>
+                </div>
+            <?php endforeach; ?>
+        </div>
     </div>
 </section>
 
-<section class="secao cinza" id="investimento">
+<section class="secao" id="investimento">
     <div class="lp-container">
-        <h2 class="titulo-secao">Escolha a sua <span>modalidade</span></h2>
+        <h2 class="titulo-secao">Garanta a sua <span>vaga</span></h2>
         <p class="intro">
             Valores do <?= $lote === '1' ? 'primeiro' : 'segundo' ?> lote, sujeitos a confirmação das datas de virada.
         </p>
@@ -154,7 +149,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <button type="button" class="bt js-abrir-popup" data-modalidade="<?= $id ?>">Quero esta modalidade</button>
+                    <button type="button" class="bt js-abrir-popup" data-modalidade="<?= $id ?>">Quero minha vaga</button>
                 </article>
             <?php endforeach; ?>
         </div>
@@ -171,7 +166,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
     </div>
 </section>
 
-<section class="secao" id="palestrantes">
+<section class="secao cinza" id="palestrantes">
     <div class="lp-container">
         <span class="chapeu">Corpo docente</span>
         <h2 class="titulo-secao">Palestrantes <span>confirmados</span></h2>
@@ -183,7 +178,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
     </div>
 </section>
 
-<section class="secao cinza" id="faq">
+<section class="secao" id="faq">
     <div class="lp-container">
         <h2 class="titulo-secao">Dúvidas <span>frequentes</span></h2>
         <div class="faq">
@@ -200,7 +195,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 <section class="chamada-final">
     <div class="lp-container">
         <h2>Do cérebro à analgesia, monitorando aquilo que realmente importa</h2>
-        <p>20 e 21 de novembro de 2026, <?= $endereco_evento ?>.</p>
+        <p>22 de novembro de 2026, <?= $endereco_evento ?>.</p>
         <a class="bt bt-claro" href="#investimento">Fazer minha inscrição</a>
         <div class="mapa">
             <iframe

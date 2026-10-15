@@ -32,7 +32,7 @@ if ($this->input->get('utm_source')) {
     <meta name="facebook-domain-verification" content="cm3z08skorh47obagy1t3dyu43roy7" />
 
     <meta property="og:title" content="Workshop de Neuromonitorização Veterinária | UFAPE 2026">
-    <meta property="og:description" content="Do cérebro à analgesia: monitorando aquilo que realmente importa. 22 de novembro de 2026, presencial, com 30 vagas e certificado UFAPE.">
+    <meta property="og:description" content="Do cérebro à analgesia: monitorando aquilo que realmente importa. 20 e 21 de novembro de 2026, presencial, com 30 vagas e certificado UFAPE.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= current_url(); ?>">
     <?php if ($banner): ?><meta property="og:image" content="<?= $lp; ?>/assets/img/<?= $banner; ?>"><?php endif; ?>

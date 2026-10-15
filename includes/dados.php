@@ -55,7 +55,7 @@ $categorias = [
 $modalidades = [
     'workshop' => [
         'titulo'      => 'Workshop',
-        'nota'        => 'Dia 22 de novembro, com cinco estações práticas e o desafio final de caso clínico, em 30 vagas.',
+        'nota'        => '20 e 21 de novembro, com sexta-feira teórica e sábado prático, em 30 vagas.',
         'checkout_id' => ['geral' => '68633'],
         'precos'      => [
             'geral' => ['1' => 95000, '2' => 125000],

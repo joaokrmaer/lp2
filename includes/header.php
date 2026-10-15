@@ -30,12 +30,12 @@ $menu_site = [
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="canonical" href="<?= $url_base ?>/">
     <title>Workshop de Neuromonitorização Veterinária | UFAPE 2026</title>
-    <meta name="description" content="Workshop de Neuromonitorização Veterinária do I Simpósio Brasileiro de Neuromonitorização Veterinária. 22 de novembro de 2026, na Faculdade Ufape, em São Paulo. Presencial, com 30 vagas e certificado UFAPE.">
+    <meta name="description" content="Workshop de Neuromonitorização Veterinária do I Simpósio Brasileiro de Neuromonitorização Veterinária. 20 e 21 de novembro de 2026, na Faculdade Ufape, em São Paulo. Presencial, com 30 vagas e certificado UFAPE.">
 
     <meta name="facebook-domain-verification" content="cm3z08skorh47obagy1t3dyu43roy7" />
 
     <meta property="og:title" content="Workshop de Neuromonitorização Veterinária | UFAPE 2026">
-    <meta property="og:description" content="Do cérebro à analgesia: monitorando aquilo que realmente importa. 22 de novembro de 2026, presencial, com 30 vagas e certificado UFAPE.">
+    <meta property="og:description" content="Do cérebro à analgesia: monitorando aquilo que realmente importa. 20 e 21 de novembro de 2026, presencial, com 30 vagas e certificado UFAPE.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="<?= $url_base ?>/">
     <?php if ($banner): ?><meta property="og:image" content="<?= $url_base ?>/assets/img/<?= $banner ?>"><?php endif; ?>

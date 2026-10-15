@@ -5,14 +5,15 @@
 
 $selos = [
     'Evento presencial',
+    'Sexta-feira teórica e sábado prático',
     'Somente 30 vagas',
     'Certificado UFAPE',
 ];
 
 $numeros = [
-    'Data'           => '22 de novembro de 2026, domingo',
+    'Data'           => '20 e 21 de novembro de 2026, sexta-feira e sábado',
     'Local'          => 'Faculdade Ufape, Unidade 2<br>Av. Tiradentes, 960, São Paulo/SP',
-    'Carga horária'  => 'Um dia inteiro de prática em estações rotativas',
+    'Carga horária'  => '16 horas, sendo 8 teóricas e 8 práticas',
     'Vagas'          => 'Somente 30 vagas, por ordem de inscrição',
 ];
 
@@ -20,11 +21,11 @@ $numeros = [
 $endereco_evento = 'Av. Tiradentes, 960, São Paulo/SP';
 
 $diferenciais = [
-    'Workshop de um dia inteiro com estações rotativas, interpretação em tempo real e casos simulados.',
-    'Turma dividida em pequenos grupos, conforme a quantidade de equipamentos e instrutores.',
-    'Prática com colocação de sensores, EEG bruto, BIS, qCON, qNOX e sinais autonômicos.',
-    'Discussão de limitações, artefatos e interpretação em diferentes espécies.',
-    'Desafio final com caso clínico progressivo e discussão coletiva das condutas.',
+    'Sexta-feira teórica e sábado prático, com 16 horas de atividades das 08h às 18h.',
+    'Integração de neuroanatomia, EEG, análises espectrais e índices processados, com destaque para o BIS.',
+    'Avaliação do paciente sob bloqueadores neuromusculares e monitorização do bloqueio por TOF.',
+    'Treinamento progressivo: instalar, avaliar o sinal, interpretar e discutir os casos.',
+    'Casos de anestesia e de UTI com e sem bloqueio neuromuscular e desafio prático em pequenos grupos.',
     'Abordagem centrada em decisões clínicas, não apenas em equipamentos.',
 ];
 
@@ -41,6 +42,25 @@ $curriculos = [
         '2023 até hoje, preceptora da residência em Anestesiologia da UFAPE',
         '2023 até hoje, auxiliar de coordenação da pós-graduação em Anestesiologia da UFAPE',
         '2024, doutorado em Anestesiologia na Faculdade de Medicina da UNESP de Botucatu',
+        '2026 até hoje, pós-doutoranda em Anestesiologia na FMVZ-USP, São Paulo',
+        '2026 até hoje, Curso Internacional de Medicina Canábica no Instituto Bioethicus, Botucatu/SP',
+    ],
+    'Prof. MSc. Daniel Zannin' => [
+        'Médico Veterinário Anestesiologista, TEAV',
+        'Formado em Medicina Veterinária pela Universidade Federal do Paraná, Curitiba/PR',
+        'Residência em Anestesiologia Veterinária pela PUCPR, Curitiba/PR',
+        'Mestre em Anestesiologia Veterinária pela Universidade Federal do Paraná, Curitiba/PR',
+        'Pós-graduado em bloqueios locorregionais pelo Instituto de Ensino e Pesquisa Ranvier, São Paulo/SP',
+        'Título de Especialista em Anestesiologia Veterinária pelo CBAV',
+        'Preceptor de Anestesiologia Veterinária no Hospital Veterinário UFAPE, São Paulo/SP',
+        'Proprietário da Comunivet, a Comunidade dos Anestesiologistas Veterinários',
+    ],
+    'Profa. MSc. Elidia Zotelli' => [
+        'Médica-veterinária com atuação em neurologia e comportamento',
+        'Mestre e doutoranda pela Universidade Santo Amaro',
+        'Especializações em Neurologia Veterinária e Neurociências pelo Hospital das Clínicas da USP',
+        'Professora de pós-graduação, palestrante convidada e autora de capítulos de livros na área',
+        'Secretária-geral da ABNV e integrante da diretoria da ABEV',
     ],
     'Prof. Dr. Alessandro Martins' => [
         'Residência em Anestesiologia Veterinária na UNESP de Jaboticabal',
@@ -83,25 +103,50 @@ function iniciais(string $nome): string
     return substr($partes[0], 0, 1) . substr(end($partes), 0, 1);
 }
 
-// O workshop veio sem horário por estação: a coluna da esquerda leva o nome da
-// estação, que é como a coordenação organizou o dia.
-$workshop = [
-    'data'      => '22 de novembro de 2026, domingo',
-    'tema'      => 'Do sensor à decisão clínica',
-    'descricao' => 'Dia inteiro de prática em estações rotativas, exclusivamente presencial. A turma será dividida em pequenos grupos conforme a quantidade de equipamentos e instrutores. Cada estação combina execução, interpretação e decisão clínica.',
-    'linhas'    => [
-        ['Estação 1', 'Colocação de sensores e qualidade de sinal', '', 'Posicionamento, impedância, preparo da pele e identificação de interferências.'],
-        ['Estação 2', 'EEG na prática', '', 'Reconhecimento de padrões de anestesia superficial, profunda, burst suppression, EMG e despertar.'],
-        ['Estação 3', 'BIS, qCON e índices processados', '', 'Correlação entre EEG bruto e números apresentados pelos monitores.'],
-        ['Estação 4', 'Nocicepção em tempo real', '', 'Integração de frequência cardíaca, pressão arterial, qNOX e demais sinais autonômicos.'],
-        ['Estação 5', 'Casos clínicos integrados', '', 'O que fazer diante de hipotensão, hipercapnia, burst suppression, nocicepção, hipotermia e recuperação inadequada?'],
-        ['Encerramento', 'Desafio final: monitore o paciente, interprete os sinais e tome a decisão', '', 'Caso clínico progressivo envolvendo diferentes monitores e alterações fisiológicas, com discussão coletiva das condutas.'],
+// Programação conforme o planejamento da coordenação (sexta teórica, sábado
+// prático). Cada linha: horário, atividade, docente proposto e conteúdo. A
+// distribuição entre docentes ainda é proposta para alinhamento.
+$programacao = [
+    [
+        'data'   => '20 de novembro de 2026, sexta-feira',
+        'tema'   => 'Teoria',
+        'linhas' => [
+            ['08h30 às 08h45', 'Abertura', 'Profa. Dra. Mayara Travalini', 'Objetivos, sequência do curso e preparação para o sábado prático.'],
+            ['08h45 às 09h45', 'Dos planos de Guedel ao awareness intraoperatório', 'Prof. MSc. Daniel Zannin', 'Limitações dos planos de Guedel e dos sinais clínicos; consciência intraoperatória e avaliação do paciente na presença de bloqueadores neuromusculares.'],
+            ['09h45 às 10h45', 'Redes neurais e neuroanatomia aplicada à anestesia', 'Prof. Dr. Rodrigo Neca (online ao vivo)', 'Estruturas e circuitos envolvidos em consciência, sono e anestesia. Ênfase em neuroanatomia, conectando a base anatômica às aulas de EEG.'],
+            ['10h45 às 11h00', 'Intervalo', '', ''],
+            ['11h00 às 12h30', 'Como funciona o EEG: do sinal às análises espectrais', 'Prof. MSc. Daniel Zannin', 'Aquisição do EEG, montagem, frequências, amplitude, qualidade do sinal e artefatos. Introdução à leitura de DSA e CSA.'],
+            ['12h30 às 13h30', 'Almoço', '', ''],
+            ['13h30 às 14h30', 'EEG clínico na neurologia veterinária', 'Profa. MSc. Elidia Zotelli', 'Leitura orientada de registros, padrões de interesse e discussão da relação entre o traçado e o contexto clínico.'],
+            ['14h30 às 15h30', 'Índice bispectral (BIS), PSI e Conox: índices processados e revisão da literatura', 'Prof. MSc. Daniel Zannin', 'Fundamentos e leitura do BIS, EEG, qualidade do sinal e EMG; evidências veterinárias e limitações dos índices BIS, PSI e qNOX.'],
+            ['15h30 às 15h45', 'Intervalo', '', ''],
+            ['15h45 às 16h30', 'Adaptação de eletrodos de agulha: o que está validado?', 'Prof. MSc. Daniel Zannin e Profa. MSc. Elidia Zotelli', 'Revisão crítica dos métodos publicados, sensores, montagens e populações estudadas; discussão dos limites de aplicação de cada resultado.'],
+            ['16h30 às 17h15', 'Neuromonitorização na UTI e bloqueadores neuromusculares (BNM)', 'Prof. Renan Holczer', 'Avaliação de hipnose e sedação sob BNM; interpretação de EEG e BIS, relação com o EMG e monitorização neuromuscular por TOF.'],
+            ['17h15 às 18h00', 'Qual monitor temos disponível na prática?', 'Prof. MSc. Daniel Zannin', 'Apresentação do BIS, dos demais neuromonitores e do monitor neuromuscular para TOF previstos para o sábado.'],
+        ],
+    ],
+    [
+        'data'   => '21 de novembro de 2026, sábado',
+        'tema'   => 'Prática',
+        'linhas' => [
+            ['08h30 às 09h00', 'Demonstração inicial e organização dos grupos práticos', 'Prof. MSc. Daniel Zannin, Prof. MSc. Yuri Vicentini e Profa. Dra. Mayara Travalini', 'Reconhecimento dos equipamentos disponíveis, funções dos participantes e roteiro de execução.'],
+            ['09h00 às 10h30', 'Instalação do BIS e de outros neuromonitores', 'Prof. MSc. Daniel Zannin', 'Preparação, posicionamento e conexão dos sensores em modelos; checagem da qualidade do sinal do BIS e identificação de falhas de instalação.'],
+            ['10h30 às 10h45', 'Intervalo', '', ''],
+            ['10h45 às 12h30', 'Leitura prática de EEG e reconhecimento de artefatos', 'Prof. MSc. Daniel Zannin e Profa. MSc. Elidia Zotelli', 'Exercícios com traçados, qualidade do registro e interpretação orientada de padrões clínicos.'],
+            ['12h30 às 13h30', 'Almoço', '', ''],
+            ['13h30 às 15h00', 'BIS, DSA, CSA e índices processados na prática', 'Prof. MSc. Daniel Zannin', 'Leitura de BIS, EEG, EMG e qualidade do sinal; interpretação de DSA e CSA e comparação com PSI e Conox, conforme equipamentos e registros disponíveis.'],
+            ['15h00 às 15h15', 'Intervalo', '', ''],
+            ['15h15 às 16h15', 'Casos de anestesia com e sem BNM', 'Prof. MSc. Daniel Zannin e Prof. MSc. Yuri Vicentini', 'Discussão de EEG, BIS, sinais clínicos e monitorização multiparamétrica em casos com e sem BNM; análise de dados discordantes e das decisões propostas.'],
+            ['16h15 às 17h15', 'Casos de UTI com BNM, EEG e BIS', 'Prof. Renan Holczer', 'Avaliação da hipnose em pacientes sob BNM; integração de EEG e BIS e treinamento da leitura do TOF em simulações ou registros clínicos.'],
+            ['17h15 às 17h45', 'Desafio prático em pequenos grupos', 'Prof. MSc. Daniel Zannin', 'Caso com BIS e TOF em paciente sob BNM: cada grupo avalia o sinal, interpreta os registros, identifica limitações e justifica suas decisões.'],
+            ['17h45 às 18h00', 'Devolutiva e encerramento', 'Prof. MSc. Daniel Zannin, Profa. Dra. Mayara Travalini e Prof. MSc. Yuri Vicentini', 'Revisão dos pontos principais e entrega do roteiro de aplicação na rotina.'],
+        ],
     ],
 ];
 
 $inclusos = [
     'Certificado UFAPE conforme presença',
-    'Participação nas cinco estações práticas e no desafio final',
+    'Aulas teóricas da sexta-feira e treinamento prático do sábado',
     'Apostila e material digital, se previsto',
 ];
 
@@ -111,10 +156,11 @@ $inclusos = [
 $palestrantes = [
     ['nome' => 'Profa. Dra. Mayara Travalini de Lima', 'tema' => 'Coordenação científica. Neuromonitorização, nocicepção, integração multimodal e casos', 'foto' => 'mayara.jpg', 'chave' => 'Mayara'],
     ['nome' => 'Prof. Dr. Alessandro Martins', 'tema' => 'Coordenação, tecnologia e integração, workshop avançado', 'foto' => 'alessandro.jpg', 'chave' => 'Alessandro'],
-    ['nome' => 'Prof. Daniel Zannin', 'tema' => 'Apoio à trilha de ventilação e UTI, conforme expertise e confirmação', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
+    ['nome' => 'Prof. MSc. Daniel Zannin', 'tema' => 'Condução principal das aulas teóricas, demonstrações e treinamento prático', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
+    ['nome' => 'Profa. MSc. Elidia Zotelli', 'tema' => 'EEG clínico, aplicação em UTI e apoio aos exercícios de interpretação', 'foto' => '', 'chave' => 'Elidia'],
     ['nome' => 'Prof. Renan Holczer', 'tema' => 'Ventilação mecânica e UTI neuromonitorizada', 'foto' => 'renan.jpg', 'chave' => 'Renan'],
     ['nome' => 'Prof. MSc. Yuri Ferreira Vicentini', 'tema' => 'Artefatos de EEG, qCON e qNOX na decisão anestésica', 'foto' => 'yuri.jpg', 'chave' => 'Yuri'],
-    ['nome' => 'Prof. Dr. Rodrigo Neca Ribeiro', 'tema' => 'Neurofisiologia aplicada à anestesia e neuromonitorização multimodal', 'foto' => 'rodrigo.jpg', 'chave' => 'Rodrigo'],
+    ['nome' => 'Prof. Dr. Rodrigo Neca Ribeiro', 'tema' => 'Aula online ao vivo sobre redes neurais e neuroanatomia aplicada à anestesia', 'foto' => 'rodrigo.jpg', 'chave' => 'Rodrigo'],
     ['nome' => 'Convidado em neurofisiologia e EEG clínico', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
     ['nome' => 'Convidado em neuroanestesia e NIRS', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
     ['nome' => 'Convidado em nocicepção e variabilidade da frequência cardíaca', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
@@ -141,10 +187,10 @@ function retratos_da_linha(string $quem): array
 }
 
 $faq = [
-    ['O workshop será presencial ou online?', 'Exclusivamente presencial, no dia 22 de novembro, na Unidade 2 da Faculdade Ufape.'],
-    ['Como funciona o dia?', 'A turma é dividida em pequenos grupos que passam por cinco estações rotativas. O dia termina com um desafio final de caso clínico progressivo e discussão coletiva das condutas.'],
-    ['É necessário saber interpretar EEG previamente?', 'Não. A primeira estação começa pela colocação de sensores e pela qualidade de sinal, e cada estação combina execução, interpretação e decisão clínica.'],
-    ['O workshop será apenas sobre BIS?', 'Não. As estações passam por EEG bruto, BIS, qCON, qNOX e sinais autonômicos como frequência cardíaca e pressão arterial.'],
+    ['O workshop será presencial ou online?', 'Presencial, nos dias 20 e 21 de novembro, na Unidade 2 da Faculdade Ufape. Na sexta-feira, a aula do Prof. Rodrigo Neca é online, ao vivo.'],
+    ['Como funcionam os dois dias?', 'A sexta-feira é teórica, com oito temas das 08h30 às 18h. O sábado é prático, com instalação dos monitores, leitura de EEG e BIS, casos com e sem bloqueio neuromuscular e um desafio em pequenos grupos.'],
+    ['É necessário saber interpretar EEG previamente?', 'Não. A sexta-feira constrói a base, de neuroanatomia, EEG e análises espectrais a índices processados, antes da prática do sábado.'],
+    ['O workshop será apenas sobre BIS?', 'Não. O BIS tem destaque, mas o programa passa por EEG, DSA, CSA, PSI, Conox e monitorização neuromuscular por TOF.'],
     ['Quantas vagas existem?', 'Somente 30, preenchidas por ordem de inscrição.'],
     ['Haverá certificado?', 'Sim, conforme presença, emitido pela UFAPE.'],
 ];

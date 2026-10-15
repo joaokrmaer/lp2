@@ -1,8 +1,9 @@
 # lp2
 
 Landing page do Workshop de Neuromonitorização Veterinária, do I Simpósio Brasileiro
-de Neuromonitorização Veterinária, Anestesia e Neurologia, 22 de novembro de 2026,
-Faculdade UFAPE.
+de Neuromonitorização Veterinária, Anestesia e Neurologia, 20 e 21 de novembro de
+2026 (sexta teórica, sábado prático), Faculdade UFAPE. A programação segue o
+planejamento da coordenação em NeuroVet_Workshop_Planejamento_Sexta_Teoria_Sabado_Pratica_2026.docx.
 
 PHP puro, sem framework e sem dependência: a página monta a partir dos arrays de
 `includes/dados.php` (preços, lotes, ids do carrinho) e `includes/conteudo.php`

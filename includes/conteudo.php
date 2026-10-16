@@ -157,7 +157,7 @@ $palestrantes = [
     ['nome' => 'Profa. Dra. Mayara Travalini de Lima', 'tema' => 'Coordenação científica. Neuromonitorização, nocicepção, integração multimodal e casos', 'foto' => 'mayara.jpg', 'chave' => 'Mayara'],
     ['nome' => 'Prof. Dr. Alessandro Martins', 'tema' => 'Coordenação, tecnologia e integração, workshop avançado', 'foto' => 'alessandro.jpg', 'chave' => 'Alessandro'],
     ['nome' => 'Prof. MSc. Daniel Zannin', 'tema' => 'Condução principal das aulas teóricas, demonstrações e treinamento prático', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
-    ['nome' => 'Profa. MSc. Elidia Zotelli', 'tema' => 'EEG clínico, aplicação em UTI e apoio aos exercícios de interpretação', 'foto' => '', 'chave' => 'Elidia'],
+    ['nome' => 'Profa. MSc. Elidia Zotelli', 'tema' => 'EEG clínico, aplicação em UTI e apoio aos exercícios de interpretação', 'foto' => 'elidia.jpg', 'chave' => 'Elidia'],
     ['nome' => 'Prof. Renan Holczer', 'tema' => 'Ventilação mecânica e UTI neuromonitorizada', 'foto' => 'renan.jpg', 'chave' => 'Renan'],
     ['nome' => 'Prof. MSc. Yuri Ferreira Vicentini', 'tema' => 'Artefatos de EEG, qCON e qNOX na decisão anestésica', 'foto' => 'yuri.jpg', 'chave' => 'Yuri'],
     ['nome' => 'Prof. Dr. Rodrigo Neca Ribeiro', 'tema' => 'Aula online ao vivo sobre redes neurais e neuroanatomia aplicada à anestesia', 'foto' => 'rodrigo.jpg', 'chave' => 'Rodrigo'],

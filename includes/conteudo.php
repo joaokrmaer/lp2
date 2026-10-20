@@ -63,13 +63,6 @@ $curriculos = [
         'Professora de pós-graduação, palestrante convidada e autora de capítulos de livros na área',
         'Secretária-geral da ABNV e integrante da diretoria da ABEV',
     ],
-    'Prof. Dr. Alessandro Martins' => [
-        'Residência em Anestesiologia Veterinária na UNESP de Jaboticabal',
-        'Especialização em Anestesiologia pela FMVZ-USP',
-        'Doutorado em Anestesiologia pela FM-USP',
-        'Presidente da APAV',
-        'CEO da Faculdade UFAPE',
-    ],
     'Prof. Renan Holczer' => [
         'Médico Veterinário',
         'Pós-graduação em Terapia Intensiva e Emergência Veterinária na UFAPE',
@@ -156,7 +149,6 @@ $inclusos = [
 // títulos diferentes a cada linha.
 $palestrantes = [
     ['nome' => 'Profa. Dra. Mayara Travalini de Lima', 'tema' => 'Coordenação científica. Neuromonitorização, nocicepção, integração multimodal e casos', 'foto' => 'mayara.jpg', 'chave' => 'Mayara'],
-    ['nome' => 'Prof. Dr. Alessandro Martins', 'tema' => 'Coordenação, tecnologia e integração, workshop avançado', 'foto' => 'alessandro.jpg', 'chave' => 'Alessandro'],
     ['nome' => 'Prof. MSc. Daniel Zannin', 'tema' => 'Condução principal das aulas teóricas, demonstrações e treinamento prático', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
     ['nome' => 'Profa. MSc. Elidia Zotelli', 'tema' => 'EEG clínico, aplicação em UTI e apoio aos exercícios de interpretação', 'foto' => 'elidia.jpg', 'chave' => 'Elidia'],
     ['nome' => 'Prof. Renan Holczer', 'tema' => 'Ventilação mecânica e UTI neuromonitorizada', 'foto' => 'renan.jpg', 'chave' => 'Renan'],

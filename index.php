@@ -22,7 +22,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
         <div>
             <span class="selo-evento">20 e 21 de novembro de 2026</span>
             <h1>Workshop de Neuromonitorização Veterinária</h1>
-            <p class="subtitulo">I Simpósio Brasileiro de Neuromonitorização Veterinária, Anestesia e Neurologia</p>
+            <p class="subtitulo">Workshop Brasileiro de Neuromonitorização Veterinária, Anestesia e Neurologia</p>
             <p class="tema">Neuromonitorização aplicada</p>
             <p class="lema">Do cérebro à analgesia: monitorando aquilo que realmente importa.</p>
             <p class="chamada">
@@ -47,7 +47,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
         </div>
         <?php if ($banner): ?>
             <div class="foto">
-                <img src="<?= $lp ?>/assets/img/<?= $banner ?>" alt="Workshop de Neuromonitorização Veterinária, I Simpósio Brasileiro de Neuromonitorização Veterinária">
+                <img src="<?= $lp ?>/assets/img/<?= $banner ?>" alt="Workshop de Neuromonitorização Veterinária, Anestesia e Neurologia">
             </div>
         <?php endif; ?>
     </div>

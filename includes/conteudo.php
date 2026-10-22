@@ -180,7 +180,7 @@ function retratos_da_linha(string $quem): array
 }
 
 $faq = [
-    ['O workshop será presencial ou online?', 'Presencial, nos dias 20 e 21 de novembro, na Unidade 2 da Faculdade Ufape. Na sexta-feira, a aula do Prof. Rodrigo Neca é online, ao vivo.'],
+    ['O workshop será presencial ou online?', 'O workshop completo é presencial, nos dias 20 e 21 de novembro, na Unidade 2 da Faculdade Ufape. As aulas teóricas da sexta-feira também podem ser acompanhadas online, ao vivo e com gravação, na modalidade Workshop Transmitido + Gravado.'],
     ['Como funcionam os dois dias?', 'A sexta-feira é teórica, com oito temas das 08h30 às 18h. O sábado é prático, com instalação dos monitores, leitura de EEG e BIS, casos com e sem bloqueio neuromuscular e um desafio em pequenos grupos.'],
     ['É necessário saber interpretar EEG previamente?', 'Não. A sexta-feira constrói a base, de neuroanatomia, EEG e análises espectrais a índices processados, antes da prática do sábado.'],
     ['O workshop será apenas sobre BIS?', 'Não. O BIS tem destaque, mas o programa passa por EEG, DSA, CSA, PSI, Conox e monitorização neuromuscular por TOF.'],

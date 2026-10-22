@@ -54,11 +54,23 @@ $categorias = [
 // vai para a secretaria pelo WhatsApp.
 $modalidades = [
     'workshop' => [
-        'titulo'      => 'Workshop',
+        'titulo'      => 'Workshop Presencial',
+        // segunda linha do título, só no card
+        'subtitulo'   => 'Teórico + Prático',
         'nota'        => '20 e 21 de novembro, com sexta-feira teórica e sábado prático, em 30 vagas.',
         'checkout_id' => ['geral' => '68633'],
         'precos'      => [
-            'geral' => ['1' => 95000, '2' => 125000],
+            'geral' => ['1' => 125000, '2' => 125000],
+        ],
+    ],
+    // Reaproveita o produto 68634, que no carrinho era o do simpósio isolado.
+    'teorico' => [
+        'titulo'      => 'Workshop Transmitido + Gravado',
+        'subtitulo'   => 'Apenas Teórico',
+        'nota'        => 'Aulas teóricas da sexta-feira, 20 de novembro, transmitidas ao vivo e gravadas.',
+        'checkout_id' => ['geral' => '68634'],
+        'precos'      => [
+            'geral' => ['1' => 45000, '2' => 45000],
         ],
     ],
 ];

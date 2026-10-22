@@ -3,7 +3,6 @@ require __DIR__ . '/includes/dados.php';
 require __DIR__ . '/includes/conteudo.php';
 
 $lote = LOTE_VIGENTE;
-$outro_lote = $lote === '1' ? '2' : '1';
 
 // Dentro do sistema da faculdade a página é uma view do CodeIgniter e usa o cabeçalho
 // institucional; solta no Apache, usa o cabeçalho próprio desta pasta. Se o controller
@@ -126,14 +125,14 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 <section class="secao" id="investimento">
     <div class="lp-container">
         <h2 class="titulo-secao">Garanta a sua <span>vaga</span></h2>
-        <p class="intro">
-            Valores do <?= $lote === '1' ? 'primeiro' : 'segundo' ?> lote, sujeitos a confirmação das datas de virada.
-        </p>
 
         <div class="grade-precos">
             <?php foreach ($modalidades as $id => $modalidade): ?>
                 <article class="lp-card card-preco">
-                    <h3><?= $modalidade['titulo'] ?></h3>
+                    <h3>
+                        <?= $modalidade['titulo'] ?>
+                        <?php if (!empty($modalidade['subtitulo'])): ?><span class="subtitulo-card"><?= $modalidade['subtitulo'] ?></span><?php endif; ?>
+                    </h3>
                     <p class="nota"><?= $modalidade['nota'] ?></p>
                     <div class="valores">
                         <?php foreach ($categorias as $cat_id => $cat_label): ?>
@@ -146,9 +145,6 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
                                 <?php else: ?>
                                     <p class="preco">
                                         <b><?= formatar_brl(valor_cheio($id, $lote)) ?></b>
-                                        <?php if ($lote === '1'): ?>
-                                            <s>2º lote <?= formatar_brl(valor_cheio($id, $outro_lote)) ?></s>
-                                        <?php endif; ?>
                                     </p>
                                 <?php endif; ?>
                             </div>

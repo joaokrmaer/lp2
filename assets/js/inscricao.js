@@ -36,7 +36,6 @@
             'Nome: ' + nome.value.trim(),
             'Telefone: ' + telefone.value.trim(),
             'Modalidade: ' + escolhida().titulo,
-            'Lote: ' + dados.lote + 'º',
             'Investimento: ' + brl(escolhida().preco)
         ];
         if (temCupom()) linhas.push('Cupom: ' + cupom.value.trim());

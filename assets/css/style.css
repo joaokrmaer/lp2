@@ -446,7 +446,7 @@ html {
 
 .grade-precos {
     display: grid;
-    grid-template-columns: minmax(0, 440px);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 440px));
     justify-content: center;
     gap: 20px;
     align-items: stretch;
@@ -461,6 +461,10 @@ html {
     font-size: 18px;
     text-transform: uppercase;
     color: var(--verde-escuro);
+}
+
+.card-preco .subtitulo-card {
+    display: block;
 }
 
 .card-preco .nota {

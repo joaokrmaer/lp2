@@ -30,7 +30,7 @@
 
             <div class="rodape-popup">
                 <div class="total">
-                    <span class="rotulo-total">Total (<?= $lote ?>º lote)</span>
+                    <span class="rotulo-total">Total</span>
                     <div class="numero js-total"></div>
                 </div>
                 <button type="button" class="bt bt-solido js-enviar" disabled></button>

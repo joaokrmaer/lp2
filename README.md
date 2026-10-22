@@ -27,8 +27,12 @@ institucionais. A pasta de publicação fica em `PASTA_NO_SITE`.
 - `LOTE_VIGENTE` precisa ser trocado no mesmo dia em que os valores mudam no
   carrinho: a página não pode anunciar preço diferente do que o checkout cobra.
 - A página vende só o workshop, produto 68633 "Workshop Neuromonitorização" no
-  carrinho, conferido a R$ 950,00 no 1º lote em 25/09/2026. Na virada do lote,
-  ele precisa ser atualizado lá junto com `LOTE_VIGENTE` aqui. O simpósio saiu
-  da página; os produtos 68631 (combo) e 68634 (simpósio) seguem no carrinho.
+  carrinho. Em 22/10/2026 a página passou a anunciar R$ 1.250,00 também no 1º
+  lote (antes R$ 950,00); o produto no carrinho precisa cobrar o mesmo valor.
+  Na virada do lote, ele precisa ser atualizado lá junto com `LOTE_VIGENTE` aqui. O simpósio saiu
+  da página; o produto 68631 (combo) segue no carrinho.
+- O card "Workshop Transmitido + Gravado" (R$ 450,00) usa o produto 68634, que
+  no carrinho era o do simpósio isolado a R$ 400,00. O nome e o valor do
+  produto precisam ser atualizados lá para bater com a página.
 - O cupom de aluno e ex-aluno precisa dar os 20% de `DESCONTO_EX_ALUNO`, que é o
-  que a página anuncia. No workshop isso é R$ 760,00 no 1º lote e R$ 1.000,00 no 2º.
+  que a página anuncia. No workshop isso é R$ 1.000,00 nos dois lotes.

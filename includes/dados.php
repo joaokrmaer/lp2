@@ -57,7 +57,8 @@ $modalidades = [
         'titulo'      => 'Workshop Presencial',
         // segunda linha do título, só no card
         'subtitulo'   => 'Teórico + Prático',
-        'nota'        => '20 e 21 de novembro, com sexta-feira teórica e sábado prático, em 30 vagas.',
+        'nota'        => '20 e 21 de novembro, em São Paulo: sexta-feira de teoria aplicada e sábado de prática presencial. 16 horas, 30 vagas presenciais e gravação da teoria por 12 meses.',
+        'botao'       => 'Quero participar presencialmente do workshop',
         'checkout_id' => ['geral' => '68633'],
         'precos'      => [
             'geral' => ['1' => 125000, '2' => 125000],
@@ -67,7 +68,8 @@ $modalidades = [
     'teorico' => [
         'titulo'      => 'Workshop Transmitido + Gravado',
         'subtitulo'   => 'Apenas Teórico',
-        'nota'        => 'Aulas teóricas da sexta-feira, 20 de novembro, transmitidas ao vivo e gravadas.',
+        'nota'        => 'Inscrição avulsa somente na teoria aplicada de sexta-feira, 20 de novembro. Assista ao vivo, online ou presencialmente, e acesse a gravação por 12 meses.',
+        'botao'       => 'Quero a teoria online ou presencial',
         'checkout_id' => ['geral' => '68634'],
         'precos'      => [
             'geral' => ['1' => 45000, '2' => 45000],

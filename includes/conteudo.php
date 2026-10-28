@@ -4,24 +4,26 @@
 // confirmação da coordenação; não invente nomes nem horários no lugar deles.
 
 $selos = [
-    'Evento presencial',
-    'Sexta-feira teórica e sábado prático',
-    'Somente 30 vagas',
+    'Presencial e online',
+    'Sexta de teoria aplicada e sábado prático',
+    '30 vagas presenciais',
+    'Gravação da teoria por 12 meses',
     'Certificado UFAPE',
 ];
 
 $numeros = [
     'Data'           => '20 e 21 de novembro de 2026, sexta-feira e sábado',
     'Local'          => 'Faculdade Ufape, Unidade 2<br>Av. Tiradentes, 960, São Paulo/SP',
-    'Carga horária'  => '16 horas, sendo 8 teóricas e 8 práticas',
-    'Vagas'          => 'Somente 30 vagas, por ordem de inscrição',
+    'Carga horária'  => '16 horas presenciais, sendo 8 de teoria e 8 de prática',
+    'Vagas'          => '30 vagas presenciais, por ordem de inscrição',
 ];
 
 // Endereço da chamada final e do mapa; a busca do Google Maps usa este texto.
 $endereco_evento = 'Av. Tiradentes, 960, São Paulo/SP';
 
 $diferenciais = [
-    'Sexta-feira teórica e sábado prático, com 16 horas de atividades das 08h às 18h.',
+    'Sexta-feira de teoria aplicada e sábado de prática presencial, com 16 horas de atividades das 08h30 às 18h.',
+    'Teoria também online, ao vivo, com acesso à gravação por 12 meses.',
     'Integração de neuroanatomia, EEG, análises espectrais e índices processados, com destaque para o BIS.',
     'Avaliação do paciente sob bloqueadores neuromusculares e monitorização do bloqueio por TOF.',
     'Treinamento progressivo: instalar, avaliar o sinal, interpretar e discutir os casos.',
@@ -56,7 +58,7 @@ $curriculos = [
         'Preceptor de Anestesiologia Veterinária no Hospital Veterinário UFAPE, São Paulo/SP',
         'Proprietário da Comunivet, a Comunidade dos Anestesiologistas Veterinários',
     ],
-    'Profa. MSc. Elidia Zotelli' => [
+    'Profa. MSc. Elídia Zotelli' => [
         'Médica-veterinária com atuação em neurologia e comportamento',
         'Mestre e doutoranda pela Universidade Santo Amaro',
         'Especializações em Neurologia Veterinária e Neurociências pelo Hospital das Clínicas da USP',
@@ -103,7 +105,7 @@ function iniciais(string $nome): string
 $programacao = [
     [
         'data'   => '20 de novembro de 2026, sexta-feira',
-        'tema'   => 'Teoria',
+        'tema'   => 'Teoria aplicada',
         'linhas' => [
             ['08h30 às 08h45', 'Abertura', 'Profa. Dra. Mayara Travalini', 'Objetivos, sequência do curso e preparação para o sábado prático.'],
             ['08h45 às 09h45', 'Dos planos de Guedel ao awareness intraoperatório', 'Prof. MSc. Daniel Zannin', 'Limitações dos planos de Guedel e dos sinais clínicos; consciência intraoperatória e avaliação do paciente na presença de bloqueadores neuromusculares.'],
@@ -111,22 +113,22 @@ $programacao = [
             ['10h45 às 11h00', 'Intervalo', '', ''],
             ['11h00 às 12h30', 'Como funciona o EEG: do sinal às análises espectrais', 'Prof. MSc. Daniel Zannin', 'Aquisição do EEG, montagem, frequências, amplitude, qualidade do sinal e artefatos. Introdução à leitura de DSA e CSA.'],
             ['12h30 às 13h30', 'Almoço', '', ''],
-            ['13h30 às 14h30', 'EEG clínico na neurologia veterinária', 'Profa. MSc. Elidia Zotelli', 'Leitura orientada de registros, padrões de interesse e discussão da relação entre o traçado e o contexto clínico.'],
+            ['13h30 às 14h30', 'EEG clínico na neurologia veterinária', 'Profa. MSc. Elídia Zotelli', 'Leitura orientada de registros, padrões de interesse e discussão da relação entre o traçado e o contexto clínico.'],
             ['14h30 às 15h30', 'Índice bispectral (BIS), PSI e Conox: índices processados e revisão da literatura', 'Prof. MSc. Daniel Zannin', 'Fundamentos e leitura do BIS, EEG, qualidade do sinal e EMG; evidências veterinárias e limitações dos índices BIS, PSI e qNOX.'],
             ['15h30 às 15h45', 'Intervalo', '', ''],
-            ['15h45 às 16h30', 'Adaptação de eletrodos de agulha: o que está validado?', 'Prof. MSc. Daniel Zannin e Profa. MSc. Elidia Zotelli', 'Revisão crítica dos métodos publicados, sensores, montagens e populações estudadas; discussão dos limites de aplicação de cada resultado.'],
+            ['15h45 às 16h30', 'Adaptação de eletrodos de agulha: o que está validado?', 'Prof. MSc. Daniel Zannin e Profa. MSc. Elídia Zotelli', 'Revisão crítica dos métodos publicados, sensores, montagens e populações estudadas; discussão dos limites de aplicação de cada resultado.'],
             ['16h30 às 17h15', 'Neuromonitorização na UTI e bloqueadores neuromusculares (BNM)', 'Prof. Renan Holczer', 'Avaliação de hipnose e sedação sob BNM; interpretação de EEG e BIS, relação com o EMG e monitorização neuromuscular por TOF.'],
             ['17h15 às 18h00', 'Qual monitor temos disponível na prática?', 'Prof. MSc. Daniel Zannin', 'Apresentação do BIS, dos demais neuromonitores e do monitor neuromuscular para TOF previstos para o sábado.'],
         ],
     ],
     [
         'data'   => '21 de novembro de 2026, sábado',
-        'tema'   => 'Prática',
+        'tema'   => 'Prática presencial',
         'linhas' => [
             ['08h30 às 09h00', 'Demonstração inicial e organização dos grupos práticos', 'Prof. MSc. Daniel Zannin, Prof. MSc. Yuri Vicentini e Profa. Dra. Mayara Travalini', 'Reconhecimento dos equipamentos disponíveis, funções dos participantes e roteiro de execução.'],
             ['09h00 às 10h30', 'Instalação do BIS e de outros neuromonitores', 'Prof. MSc. Daniel Zannin', 'Preparação, posicionamento e conexão dos sensores em modelos; checagem da qualidade do sinal do BIS e identificação de falhas de instalação.'],
             ['10h30 às 10h45', 'Intervalo', '', ''],
-            ['10h45 às 12h30', 'Leitura prática de EEG e reconhecimento de artefatos', 'Prof. MSc. Daniel Zannin e Profa. MSc. Elidia Zotelli', 'Exercícios com traçados, qualidade do registro e interpretação orientada de padrões clínicos.'],
+            ['10h45 às 12h30', 'Leitura prática de EEG e reconhecimento de artefatos', 'Prof. MSc. Daniel Zannin e Profa. MSc. Elídia Zotelli', 'Exercícios com traçados, qualidade do registro e interpretação orientada de padrões clínicos.'],
             ['12h30 às 13h30', 'Almoço', '', ''],
             ['13h30 às 15h00', 'BIS, DSA, CSA e índices processados na prática', 'Prof. MSc. Daniel Zannin', 'Leitura de BIS, EEG, EMG e qualidade do sinal; interpretação de DSA e CSA e comparação com PSI e Conox, conforme equipamentos e registros disponíveis.'],
             ['15h00 às 15h15', 'Intervalo', '', ''],
@@ -139,25 +141,21 @@ $programacao = [
 ];
 
 $inclusos = [
-    'Certificado UFAPE conforme presença',
-    'Aulas teóricas da sexta-feira e treinamento prático do sábado',
-    'Apostila e material digital, se previsto',
+    'Workshop presencial: certificado UFAPE conforme presença',
+    'Somente a teoria: certificado das 8 horas teóricas como ouvinte',
+    'Gravação da teoria por 12 meses nas duas modalidades, liberada 7 dias úteis após o evento',
 ];
 
 // A foto entra quando a coordenação enviar; sem ela o card mostra só nome e atuação.
 // A chave é o trecho pelo qual a agenda reconhece o palestrante, que aparece lá com
 // títulos diferentes a cada linha.
 $palestrantes = [
-    ['nome' => 'Profa. Dra. Mayara Travalini de Lima', 'tema' => 'Coordenação científica. Neuromonitorização, nocicepção, integração multimodal e casos', 'foto' => 'mayara.jpg', 'chave' => 'Mayara'],
-    ['nome' => 'Prof. MSc. Daniel Zannin', 'tema' => 'Condução principal das aulas teóricas, demonstrações e treinamento prático', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
-    ['nome' => 'Profa. MSc. Elidia Zotelli', 'tema' => 'EEG clínico, aplicação em UTI e apoio aos exercícios de interpretação', 'foto' => 'elidia.jpg', 'chave' => 'Elidia'],
-    ['nome' => 'Prof. Renan Holczer', 'tema' => 'Ventilação mecânica e UTI neuromonitorizada', 'foto' => 'renan.jpg', 'chave' => 'Renan'],
-    ['nome' => 'Prof. MSc. Yuri Ferreira Vicentini', 'tema' => 'Artefatos de EEG, qCON e qNOX na decisão anestésica', 'foto' => 'yuri.jpg', 'chave' => 'Yuri'],
-    ['nome' => 'Prof. Dr. Rodrigo Neca Ribeiro', 'tema' => 'Aula online ao vivo sobre redes neurais e neuroanatomia aplicada à anestesia', 'foto' => 'rodrigo.jpg', 'chave' => 'Rodrigo'],
-    ['nome' => 'Convidado em neurofisiologia e EEG clínico', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
-    ['nome' => 'Convidado em neuroanestesia e NIRS', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
-    ['nome' => 'Convidado em nocicepção e variabilidade da frequência cardíaca', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
-    ['nome' => 'Convidado em inteligência artificial e processamento de sinais', 'tema' => 'A definir', 'foto' => '', 'chave' => ''],
+    ['nome' => 'Profa. Dra. Mayara Travalini de Lima', 'tema' => 'Coordenação científica; abertura e atividades práticas integradas', 'foto' => 'mayara.jpg', 'chave' => 'Mayara'],
+    ['nome' => 'Prof. MSc. Daniel Zannin', 'tema' => 'Condução principal da teoria, demonstrações e treinamento prático', 'foto' => 'zannin.jpg', 'chave' => 'Daniel'],
+    ['nome' => 'Profa. MSc. Elídia Zotelli', 'tema' => 'EEG clínico, registros e exercícios de interpretação', 'foto' => 'elidia.jpg', 'chave' => 'Elídia'],
+    ['nome' => 'Prof. Renan Holczer', 'tema' => 'Neuromonitorização em UTI e casos com bloqueio neuromuscular', 'foto' => 'renan.jpg', 'chave' => 'Renan'],
+    ['nome' => 'Prof. MSc. Yuri Ferreira Vicentini', 'tema' => 'Atividades práticas e casos anestésicos; artefatos de EEG, qCON e qNOX', 'foto' => 'yuri.jpg', 'chave' => 'Yuri'],
+    ['nome' => 'Prof. Dr. Rodrigo Neca Ribeiro', 'tema' => 'Redes neurais e neuroanatomia; participação online ao vivo', 'foto' => 'rodrigo.jpg', 'chave' => 'Rodrigo'],
 ];
 
 $fotos_palestrantes = array_filter(array_column($palestrantes, 'foto', 'chave'));
@@ -180,10 +178,12 @@ function retratos_da_linha(string $quem): array
 }
 
 $faq = [
-    ['O workshop será presencial ou online?', 'O workshop completo é presencial, nos dias 20 e 21 de novembro, na Unidade 2 da Faculdade Ufape. As aulas teóricas da sexta-feira também podem ser acompanhadas online, ao vivo e com gravação, na modalidade Workshop Transmitido + Gravado.'],
-    ['Como funcionam os dois dias?', 'A sexta-feira é teórica, com oito temas das 08h30 às 18h. O sábado é prático, com instalação dos monitores, leitura de EEG e BIS, casos com e sem bloqueio neuromuscular e um desafio em pequenos grupos.'],
-    ['É necessário saber interpretar EEG previamente?', 'Não. A sexta-feira constrói a base, de neuroanatomia, EEG e análises espectrais a índices processados, antes da prática do sábado.'],
-    ['O workshop será apenas sobre BIS?', 'Não. O BIS tem destaque, mas o programa passa por EEG, DSA, CSA, PSI, Conox e monitorização neuromuscular por TOF.'],
-    ['Quantas vagas existem?', 'Somente 30, preenchidas por ordem de inscrição.'],
-    ['Haverá certificado?', 'Sim, conforme presença, emitido pela UFAPE.'],
+    ['Posso comprar somente a teoria?', 'Sim. A teoria aplicada de sexta-feira, 20 de novembro, pode ser adquirida separadamente, com transmissão ao vivo e gravação disponível por 12 meses. Quem compra somente a teoria também pode assisti-la presencialmente.'],
+    ['A prática será online?', 'Não. O treinamento de sábado, 21 de novembro, faz parte da modalidade presencial e será realizado na Unidade 2 da Faculdade UFAPE, em São Paulo.'],
+    ['O professor Neca estará presencialmente?', 'O Prof. Rodrigo Neca Ribeiro participará online, ao vivo, da aula de redes neurais e neuroanatomia aplicada à anestesia.'],
+    ['Preciso saber interpretar EEG?', 'Não é necessário conhecimento prévio de interpretação de EEG. A teoria aplicada apresenta a base para os exercícios do workshop.'],
+    ['Por quanto tempo terei acesso à gravação?', 'Por 12 meses. A gravação da teoria é liberada sete dias úteis após o evento, tanto para quem comprou somente a teoria quanto para quem participa do workshop presencial completo.'],
+    ['Haverá certificado?', 'Sim. No workshop presencial, o certificado é emitido conforme presença. Quem adquirir somente a teoria recebe certificado das 8 horas teóricas como ouvinte.'],
+    ['Alunos UFAPE têm desconto?', 'Sim. Alunos e ex-alunos UFAPE têm 20% de desconto nas duas modalidades, mediante comprovação do vínculo.'],
+    ['Quantas vagas existem?', 'São 30 vagas presenciais, preenchidas por ordem de inscrição.'],
 ];

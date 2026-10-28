@@ -25,9 +25,11 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
             <p class="tema">Neuromonitorização aplicada</p>
             <p class="lema">Do cérebro à analgesia: monitorando aquilo que realmente importa.</p>
             <p class="chamada">
-                Uma sexta-feira teórica e um sábado prático para o médico veterinário integrar neuroanatomia, EEG,
-                análises espectrais e índices processados, com destaque para o BIS, à monitorização anestésica e à
-                sedação em UTI, incluindo o paciente sob bloqueio neuromuscular.
+                Nos dias 20 e 21 de novembro de 2026, a UFAPE reúne um corpo docente com atuação em anestesiologia,
+                neurologia e terapia intensiva para discutir a interpretação do EEG, as análises espectrais, os índices
+                processados e a monitorização neuromuscular. Na sexta-feira, a teoria aplicada prepara o participante
+                para o treinamento prático presencial de sábado. Você também pode adquirir somente a teoria online,
+                acompanhar ao vivo e acessar a gravação por 12 meses.
             </p>
             <p class="publico">
                 <strong>Público alvo:</strong> médicos veterinários, anestesiologistas, intensivistas, residentes,
@@ -95,8 +97,8 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
     <div class="lp-container">
         <h2 class="titulo-secao">Programação <span>do workshop</span></h2>
         <p class="intro">
-            Sexta-feira teórica e sábado prático, das 08h às 18h nos dois dias. A distribuição entre docentes segue
-            em alinhamento com a coordenação.
+            Sexta-feira de teoria aplicada e sábado de prática presencial, das 08h30 às 18h nos dois dias. A teoria
+            também pode ser acompanhada online, ao vivo, com gravação disponível por 12 meses.
         </p>
 
         <?php foreach ($programacao as $dia): ?>
@@ -124,7 +126,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
 
 <section class="secao" id="investimento">
     <div class="lp-container">
-        <h2 class="titulo-secao">Garanta a sua <span>vaga</span></h2>
+        <h2 class="titulo-secao">Escolha sua <span>modalidade</span></h2>
 
         <div class="grade-precos">
             <?php foreach ($modalidades as $id => $modalidade): ?>
@@ -150,7 +152,7 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
                             </div>
                         <?php endforeach; ?>
                     </div>
-                    <button type="button" class="bt js-abrir-popup" data-modalidade="<?= $id ?>">Quero minha vaga</button>
+                    <button type="button" class="bt js-abrir-popup" data-modalidade="<?= $id ?>"><?= $modalidade['botao'] ?? 'Quero minha vaga' ?></button>
                 </article>
             <?php endforeach; ?>
         </div>
@@ -162,7 +164,8 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
         </div>
 
         <p class="aviso-lote">
-            Aluno e ex-aluno UFAPE comprovam o vínculo com a secretaria para garantir a condição especial.
+            Aluno e ex-aluno UFAPE têm 20% de desconto nas duas modalidades, mediante comprovação do vínculo com a
+            secretaria.
         </p>
     </div>
 </section>

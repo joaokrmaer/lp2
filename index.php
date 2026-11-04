@@ -11,7 +11,7 @@ $no_sistema = function_exists('site_url');
 $lp = $no_sistema ? rtrim(base_url(PASTA_NO_SITE), '/') : '.';
 
 // Sem a arte do evento o hero fica em uma coluna só, centralizado.
-$banner = file_exists(__DIR__ . '/assets/img/hero-simposio.jpg') ? 'hero-simposio.jpg' : '';
+$banner = file_exists(__DIR__ . '/assets/img/hero-simposio.png') ? 'hero-simposio.png' : '';
 
 require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/header.php');
 ?>

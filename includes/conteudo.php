@@ -13,13 +13,16 @@ $selos = [
 
 $numeros = [
     'Data'           => '20 e 21 de novembro de 2026, sexta-feira e sábado',
-    'Local'          => 'Faculdade Ufape, Unidade 2<br>Av. Tiradentes, 960, São Paulo/SP',
+    'Local'          => 'Faculdade Ufape, Unidade 1<br>Av. 9 de Julho, 3939, esquina com a R. Honduras, 765<br>Jd. Paulista, São Paulo/SP, 01407-100',
     'Carga horária'  => '16 horas presenciais, sendo 8 de teoria e 8 de prática',
     'Vagas'          => '30 vagas presenciais, por ordem de inscrição',
 ];
 
-// Endereço da chamada final e do mapa; a busca do Google Maps usa este texto.
-$endereco_evento = 'Av. Tiradentes, 960, São Paulo/SP';
+// Endereço exibido na chamada final.
+$endereco_evento = 'na Faculdade Ufape, Unidade 1, Av. 9 de Julho, 3939, esquina com a R. Honduras, Jd. Paulista, São Paulo/SP';
+
+// Texto que o Google Maps busca no mapa e no link; sem "esquina" para o Maps achar o número certo.
+$endereco_mapa = 'Av. Nove de Julho, 3939, Jardim Paulista, São Paulo, SP, 01407-100';
 
 $diferenciais = [
     'Sexta-feira de teoria aplicada e sábado de prática presencial, com 16 horas de atividades das 08h30 às 18h.',
@@ -179,7 +182,7 @@ function retratos_da_linha(string $quem): array
 
 $faq = [
     ['Posso comprar somente a teoria?', 'Sim. A teoria aplicada de sexta-feira, 20 de novembro, pode ser adquirida separadamente, com transmissão ao vivo e gravação disponível por 12 meses. Quem compra somente a teoria também pode assisti-la presencialmente.'],
-    ['A prática será online?', 'Não. O treinamento de sábado, 21 de novembro, faz parte da modalidade presencial e será realizado na Unidade 2 da Faculdade UFAPE, em São Paulo.'],
+    ['A prática será online?', 'Não. O treinamento de sábado, 21 de novembro, faz parte da modalidade presencial e será realizado na Unidade 1 da Faculdade UFAPE, na Av. 9 de Julho, 3939, em São Paulo.'],
     ['O professor Neca estará presencialmente?', 'O Prof. Rodrigo Neca Ribeiro participará online, ao vivo, da aula de redes neurais e neuroanatomia aplicada à anestesia.'],
     ['Preciso saber interpretar EEG?', 'Não é necessário conhecimento prévio de interpretação de EEG. A teoria aplicada apresenta a base para os exercícios do workshop.'],
     ['Por quanto tempo terei acesso à gravação?', 'Por 12 meses. A gravação da teoria é liberada sete dias úteis após o evento, tanto para quem comprou somente a teoria quanto para quem participa do workshop presencial completo.'],

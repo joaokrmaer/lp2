@@ -203,13 +203,13 @@ require __DIR__ . ($no_sistema ? '/includes/header-sistema.php' : '/includes/hea
         <a class="bt bt-claro" href="#investimento">Fazer minha inscrição</a>
         <div class="mapa">
             <iframe
-                src="https://www.google.com/maps?q=<?= urlencode($endereco_evento) ?>&amp;output=embed"
+                src="https://www.google.com/maps?q=<?= urlencode($endereco_mapa) ?>&amp;output=embed"
                 title="Mapa do local do evento"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
                 allowfullscreen></iframe>
         </div>
-        <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode($endereco_evento) ?>" target="_blank" rel="noopener">Abrir no Google Maps</a>
+        <a class="link-mapa" href="https://www.google.com/maps/search/?api=1&amp;query=<?= urlencode($endereco_mapa) ?>" target="_blank" rel="noopener">Abrir no Google Maps</a>
     </div>
 </section>
 
